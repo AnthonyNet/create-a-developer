@@ -1,6 +1,7 @@
 export const Exercise_1_App: string = `
 import React from 'react';
 import Exercise_1_Section from './Exercise_1_Section';
+import './style.css';
 
 function App() {
 	const movies = [
@@ -30,6 +31,8 @@ export default App;
 export const Exercise_1_Answer: string = `
 import React from 'react';
 import Exercise_1_Section from './Exercise_1_Section';
+import './style.css';
+
 function App() {
 	const movies = [
 		{ id: 1, title: "The Shawshank Redemption", year: 1994 },

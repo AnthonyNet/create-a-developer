@@ -4,7 +4,8 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
 
-function Exercise_1({props, preview}:any) {
+function Exercise_1({props, preview, styles}:any) {
+
 
 const button = `export default function Button() {}`;
 	return (
@@ -19,6 +20,7 @@ const button = `export default function Button() {}`;
 				files={{
 					"/App.js": props,
 					"/Exercise_1_Section.js": preview,
+					"/style.css": styles,
 				}}
 
 				/>
