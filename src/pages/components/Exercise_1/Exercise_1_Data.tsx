@@ -64,7 +64,8 @@ import React from 'react';
 function Exercise_1_Section({props}) {
 
 
-return <section style={{height:"100vh", width: "100vw", display:"grid", justifyContent: "center", alignContent: "center"}}>
+return <section>
+			<h2>Seznam</h2>
 			<ul>
 				{props&&props.map((movie) => (
 					<li style={{listStyle:"none"}} key={movie.id}>{movie.title}</li>
