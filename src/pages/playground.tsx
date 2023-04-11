@@ -6,6 +6,9 @@ import {Exercise_1_App, Exercise_1_Answer, Exercise_1_Section} from './component
 
 const Playground = () => {
 const [showAnswer, setShowAnswer] = useState(false)
+const handleClick = () => {
+setShowAnswer((showAnswer) => !showAnswer);
+}
 
   return (
 		<section className="grid items-center align-center h-screen w-screen">
@@ -14,7 +17,7 @@ const [showAnswer, setShowAnswer] = useState(false)
 				preview={Exercise_1_Section}
 			/>
 			<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-			 onClick={() => setShowAnswer((showAnswer) => !showAnswer)}>
+			 onClick={handleClick}>
 				Ukaž odpověď
 			</button>
 		</section>
