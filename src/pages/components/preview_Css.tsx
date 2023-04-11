@@ -1,20 +1,27 @@
 export const preview_Css = `
 section {
-	height: 100vh;
-	width: 100vw;
+	height: 97vh;
+	width: 97.9vw;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border: 2px solid red;
 }
 ul{
 	border: 7px double #5093ff;
 	width: 40%;
+	height: 70dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 }
 
-li {
+li {margin-left: -40px;
 	color: #3784e9;
-	border: 2px solid red;
+	padding: 10px;
 	border-bottom: 1px solid black;
 
 	font-weight: bold;

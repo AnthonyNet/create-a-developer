@@ -12,7 +12,7 @@ function Exercise_1({props, preview, styles}:any) {
 			<Sandpack
 				template="react"
 				options={{
-					editorHeight: "95vh",
+					editorHeight: "100vh",
 					showConsole: true,
 				}}
 				theme={amethyst}
