@@ -6,7 +6,7 @@ import {Exercise_1_App, Exercise_1_Answer, Exercise_1_Section} from './component
 import {preview_Css} from './components/preview_Css'
 
 const Playground = () => {
-const [showAnswer, setShowAnswer] = useState(false)
+const [showAnswer, setShowAnswer] = useState<boolean>(false)
 const handleClick = () => {
 setShowAnswer((showAnswer) => !showAnswer);
 }
