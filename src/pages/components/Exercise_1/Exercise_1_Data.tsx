@@ -38,7 +38,10 @@ function App() {
 		{ id: 4, title: "The Dark Knight", year: 2008 },
 	];
 
-	/* CVIČENÍ ZDE*/
+	/* ZADÁNÍ */
+	/* Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:*/
+	/* { id: id_filmu, title: název_filmu } */
+
 	const filter = () => {
 		/*Zde napiš odpověď */
 
