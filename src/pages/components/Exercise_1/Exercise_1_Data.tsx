@@ -1,5 +1,4 @@
-export const Exercise_1_App: string = `
-import React from 'react';
+export const Exercise_1_App: string = `import React from 'react';
 import Exercise_1_Section from './Exercise_1_Section';
 import './style.css';
 
@@ -28,8 +27,7 @@ function App() {
 export default App;
 `;
 
-export const Exercise_1_Answer: string = `
-import React from 'react';
+export const Exercise_1_Answer: string = `import React from 'react';
 import Exercise_1_Section from './Exercise_1_Section';
 import './style.css';
 
