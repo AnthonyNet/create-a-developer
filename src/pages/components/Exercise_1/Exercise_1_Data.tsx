@@ -13,6 +13,7 @@ function App() {
 	/* ZADÁNÍ */
 	/* Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:*/
 	/* { id: id_filmu, title: název_filmu } */
+
 	const filter = () => {
 		/*Zde, ZA RETURN,  napiš odpověď */
 
