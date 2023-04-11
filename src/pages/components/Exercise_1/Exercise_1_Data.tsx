@@ -61,10 +61,10 @@ import React from 'react';
 function Exercise_1_Section({props}) {
 
 
-return <section style={{height:"100vh", width: "100vw", display:"flex", flexDirection:"column", justifyContent: "space-around"}}>
+return <section style={{height:"100vh", width: "100vw", display:"grid", justifyContent: "center", alignContent: "center"}}>
 			<ul>
 				{props&&props.map((movie) => (
-					<li style={{}} key={movie.id}>{movie.title}</li>
+					<li style={{listStyle:"none"}} key={movie.id}>{movie.title}</li>
 				))}
 			</ul>
 		</section>
