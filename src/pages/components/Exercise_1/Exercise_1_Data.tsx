@@ -15,7 +15,7 @@ function App() {
 	/* { id: id_filmu, title: název_filmu } */
 
 	const filter = () => {
-		/*Zde, ZA RETURN,  napiš odpověď */
+		/*Zde napiš odpověď */
 
 		return
 
