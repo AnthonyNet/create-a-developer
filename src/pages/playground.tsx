@@ -12,7 +12,7 @@ setShowAnswer((showAnswer) => !showAnswer);
 }
 
   return (
-		<section className="grid items-center align-center h-screen w-screen">
+		<section>
 			<Exercise_1
 				props={showAnswer?Exercise_1_Answer:Exercise_1_App}
 				preview={Exercise_1_Section}

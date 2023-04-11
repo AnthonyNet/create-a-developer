@@ -68,7 +68,7 @@ return <section>
 			<h2>Seznam</h2>
 			<ul>
 				{props&&props.map((movie) => (
-					<li style={{listStyle:"none"}} key={movie.id}>{movie.title}</li>
+					<li key={movie.id}>{movie.title}</li>
 				))}
 			</ul>
 		</section>
