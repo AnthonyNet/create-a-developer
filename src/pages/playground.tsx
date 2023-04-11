@@ -26,4 +26,4 @@ setShowAnswer((showAnswer) => !showAnswer);
 	);
 }
 
-export default Playground
+export default Playground;

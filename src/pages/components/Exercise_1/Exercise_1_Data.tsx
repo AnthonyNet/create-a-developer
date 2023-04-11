@@ -63,7 +63,7 @@ function Exercise_1_Section({props}) {
 
 
 return <section>
-			<h2>Seznam</h2>
+			<h2>Seznam filmů:</h2>
 			<ul>
 				{props&&props.map((movie) => (
 					<li key={movie.id}>{movie.title}</li>
