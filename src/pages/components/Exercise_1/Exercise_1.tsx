@@ -7,9 +7,8 @@ import { amethyst } from "@codesandbox/sandpack-themes";
 function Exercise_1({props, preview, styles}:any) {
 
 
-const button = `export default function Button() {}`;
+
 	return (
-		<div className="w-full h-full">
 			<Sandpack
 				template="react"
 				options={{
@@ -24,7 +23,6 @@ const button = `export default function Button() {}`;
 				}}
 
 				/>
-		</div>
 	);
 }
 
