@@ -67,12 +67,6 @@ return <section style={{height:"100vh", width: "100vw", display:"flex", flexDire
 					<li style={{}} key={movie.id}>{movie.title}</li>
 				))}
 			</ul>
-			<button style={{alignSelf: "start"}}
-				onClick={() => {
-					window.alert()
-				}}>
-				Správná odpověď
-			</button>
 		</section>
 }
 export default Exercise_1_Section;
