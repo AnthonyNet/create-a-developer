@@ -11,18 +11,18 @@ function Exercise_1({props, preview, styles}:Props) {
 
 	return (
 		<Sandpack
-			template="react"
 			options={{
 				editorHeight: "96vh",
 				showConsole: true,
 				visibleFiles: ["/App.js"],
 			}}
-			theme={amethyst}
 			files={{
 				"/App.js": props,
 				"/Exercise_1_Section.js": preview,
 				"/style.css": styles,
 			}}
+			template="react"
+			theme={amethyst}
 		/>
 	);
 }
