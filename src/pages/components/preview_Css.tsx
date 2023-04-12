@@ -1,7 +1,7 @@
 export const preview_Css = `
 section {
-	height: 97vh;
-	width: 97.9vw;
+	height: 97dvh;
+	width: 100%;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
