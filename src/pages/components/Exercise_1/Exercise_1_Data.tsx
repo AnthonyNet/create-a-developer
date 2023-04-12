@@ -27,12 +27,14 @@ export const filter: string = `export const filter = () => {
 		{ id: 4, title: "The Dark Knight", year: 2008 },
 	];
 
-	/* ZADÁNÍ */
-	/* Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:*/
-	/* { id: id_filmu, title: název_filmu } */
+	/*
+	ZADÁNÍ
+	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
+	{ id: id_filmu, title: název_filmu }
+	*/
 
 
-		/*Zde napiš odpověď */
+		/* Zde napiš odpověď */
 
 		return
 
@@ -49,12 +51,13 @@ export const filter_Answer: string = `export const filter = () => {
 		{ id: 4, title: "The Dark Knight", year: 2008 },
 	];
 
-	/* ZADÁNÍ */
-	/* Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:*/
-	/* { id: id_filmu, title: název_filmu } */
+	/*
+	ZADÁNÍ
+	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
+	{ id: id_filmu, title: název_filmu }
+	*/
 
-
-		/*Zde napiš odpověď */
+		/* Zde napiš odpověď */
 
 		return movies.map((movie) => ({ id: movie.id, title: movie.title }));
 
