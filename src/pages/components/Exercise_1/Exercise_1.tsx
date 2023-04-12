@@ -15,6 +15,7 @@ function Exercise_1({props, preview, styles}:Props) {
 				editorHeight: "96vh",
 				showConsole: true,
 				visibleFiles: ["/App.js"],
+
 			}}
 			files={{
 				"/App.js": props,
@@ -23,6 +24,7 @@ function Exercise_1({props, preview, styles}:Props) {
 			}}
 			template="react"
 			theme={amethyst}
+
 		/>
 	);
 }

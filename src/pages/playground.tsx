@@ -14,13 +14,19 @@ setShowAnswer((showAnswer) => !showAnswer);
   return (
 		<section>
 			<Exercise_1
-				props={showAnswer?Exercise_1_Answer:Exercise_1_App}
+				props={showAnswer ? Exercise_1_Answer : Exercise_1_App}
 				preview={Exercise_1_Section}
 				styles={preview_Css}
 			/>
-			<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-			 onClick={handleClick}>
+			<button
+				className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-4"
+				onClick={handleClick}>
 				Ukaž odpověď
+			</button>
+			<button
+				className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				onClick={()=>setShowAnswer(false)}>
+				Restart
 			</button>
 		</section>
 	);
