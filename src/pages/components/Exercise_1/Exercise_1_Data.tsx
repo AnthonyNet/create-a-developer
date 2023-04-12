@@ -7,7 +7,7 @@ function App() {
 			<h2>Seznam filmů:</h2>
 			<ul>
 				{filter()&&filter().map((movie) => (
-					<li key={movie.id}>{movie.title}</li>
+					<li key={crypto.randomUUID()}>{movie.id}. {movie.title}</li>
 				))}
 			</ul>
 		</section>

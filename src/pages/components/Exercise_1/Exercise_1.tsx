@@ -14,7 +14,7 @@ function Exercise_1({app, exercise, styles}:Props) {
 			options={{
 				editorHeight: "96vh",
 				showConsole: true,
-				visibleFiles: ["/filter.js"],
+				visibleFiles: ["/filter.js", "/App.js"],
 				activeFile: "/filter.js",
 			}}
 			files={{
