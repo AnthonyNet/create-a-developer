@@ -6,7 +6,7 @@ import { amethyst } from "@codesandbox/sandpack-themes";
 type Props = {
 	files: SandpackFiles;
 }
-function Exercise_1({props, preview, styles}:Props) {
+function Exercise_1({app, exercise, styles}:Props) {
 
 
 	return (
@@ -14,17 +14,19 @@ function Exercise_1({props, preview, styles}:Props) {
 			options={{
 				editorHeight: "96vh",
 				showConsole: true,
-				visibleFiles: ["/App.js"],
-
+				visibleFiles: ["/filter.js"],
+				activeFile: "/filter.js",
 			}}
 			files={{
-				"/App.js": props,
-				"/Exercise_1_Section.js": preview,
+				"/App.js": {
+					code: app,
+					readOnly: true,
+				},
+				"/filter.js": exercise,
 				"/style.css": styles,
 			}}
 			template="react"
 			theme={amethyst}
-
 		/>
 	);
 }

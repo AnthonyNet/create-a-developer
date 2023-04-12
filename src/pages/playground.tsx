@@ -2,7 +2,7 @@
 import React from 'react'
 import {useState} from 'react'
 import Exercise_1 from './components/Exercise_1/Exercise_1'
-import {Exercise_1_App, Exercise_1_Answer, Exercise_1_Section} from './components/Exercise_1/Exercise_1_Data'
+import {Exercise_1_App, filter, filter_Answer} from './components/Exercise_1/Exercise_1_Data'
 import {preview_Css} from './components/preview_Css'
 
 const Playground = () => {
@@ -14,8 +14,8 @@ setShowAnswer((showAnswer) => !showAnswer);
   return (
 		<section>
 			<Exercise_1
-				props={showAnswer ? Exercise_1_Answer : Exercise_1_App}
-				preview={Exercise_1_Section}
+				app={Exercise_1_App}
+				exercise={showAnswer?filter_Answer:filter}
 				styles={preview_Css}
 			/>
 			<button
