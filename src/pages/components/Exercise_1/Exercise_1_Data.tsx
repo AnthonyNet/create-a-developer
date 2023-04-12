@@ -1,6 +1,6 @@
 export const Exercise_1_App: string = `import React from 'react';
 import './style.css';
-import {filter} from './filter';
+import filter from './filter';
 function App() {
 
 	return  <section>
@@ -19,7 +19,7 @@ export default App;
 `;
 
 
-export const filter: string = `export const filter = () => {
+export const filter: string = `export default () => {
 	/*
 	ZADÁNÍ
 	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
@@ -41,18 +41,19 @@ export const filter: string = `export const filter = () => {
 	};
 `;
 
-export const filter_Answer: string = `export const filter = () => {
-	/*
-	ZADÁNÍ
-	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
-	{ id: id_filmu, title: název_filmu }
-	*/
+export const filter_Answer: string = `export default () => {
 		const movies = [
 		{ id: 1, title: "The Shawshank Redemption", year: 1994 },
 		{ id: 2, title: "The Godfather", year: 1972 },
 		{ id: 3, title: "The Godfather: Part II", year: 1974 },
 		{ id: 4, title: "The Dark Knight", year: 2008 },
 	];
+
+	/*
+	ZADÁNÍ
+	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
+	{ id: id_filmu, title: název_filmu }
+	*/
 
 		/* Zde napiš odpověď */
 
