@@ -33,6 +33,7 @@ interface Files {
 	"/style.css": string;*/
 }
 
+
 interface Setup_Props {
 	options: Options;
 	files: Files;
