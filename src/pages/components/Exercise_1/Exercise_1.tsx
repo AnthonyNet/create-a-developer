@@ -3,19 +3,17 @@ import React from "react";
 import { useState } from "react";
 import {
 	Sandpack,
-	SandpackCodeOptions,
 	SandpackFile,
 	SandpackFileExplorerProp,
-	SandpackFiles,
-	SandpackProps,
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
-import { Exercise_1_App, filter, filter_Answer } from "./Exercise_1_Data";
+import { filter, filter_Answer } from "./Exercise_1_Data";
 import { preview_Css } from "./preview_Css";
 
 type Props = {
 	app: string;
+	props: {};
 };
 
 interface Options {
@@ -26,11 +24,10 @@ interface Options {
 	showLineNumbers: boolean;
 	showInlineErrors: boolean;
 	externalResources?: string[];
-
 }
 
 interface Files {
-	[key]: Sandpackfile;
+	[key: string]: SandpackFileExplorerProp;
 	/*"/App.js": SandpackFile;
 	"/filter.js": string;
 	"/style.css": string;*/
@@ -44,7 +41,7 @@ interface Setup_Props {
 	theme: string | any;
 }
 
-function Exercise_1({ app }: Props) {
+function Exercise_1({ app, props }: Props) {
 	const [showAnswer, setShowAnswer] = useState<boolean>(false);
 
 	const handleClick = () => {
@@ -55,6 +52,8 @@ function Exercise_1({ app }: Props) {
 		options: {
 			editorHeight: "96vh",
 			showConsole: true,
+			/*visibleFiles: ["/filter.js", "/style.css"],
+			activeFile: "/filter.js",*/
 			showConsoleButton: true,
 			closableTabs: false,
 			showLineNumbers: true,
@@ -86,7 +85,7 @@ function Exercise_1({ app }: Props) {
 
 	return (
 		<>
-			<Sandpack {...Setup_Props} />
+			<Sandpack {...Setup_Props} {...props} />
 			<button onClick={handleClick}>Ukaž odpověď</button>
 			<button onClick={() => setShowAnswer(false)}>Restart</button>
 		</>
