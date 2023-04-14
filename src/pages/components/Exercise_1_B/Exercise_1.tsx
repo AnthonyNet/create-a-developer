@@ -11,8 +11,9 @@ import {
 	SandpackLayout,
 	SandpackPreview,
 	SandpackCodeEditor,
+	SandpackConsole,
 
-	SandpackConsole
+
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { useSandpack } from "@codesandbox/sandpack-react";
@@ -46,7 +47,6 @@ interface Setup_Props {
 const layout = {
 	height: "100vh",
 	width: "100vw",
-
 };
 
 function Exercise_1({ app, exercise, styles }: Props) {
@@ -74,16 +74,21 @@ function Exercise_1({ app, exercise, styles }: Props) {
 	//return <Sandpack {...Setup_Props} />;
 
 return (
-	<SandpackProvider template="react" theme={amethyst}>
-		<SandpackLayout style={{ height: "100vh" }} contentEditable>
-			<SandpackCodeEditor style={{ height: "100%" }} contentEditable />
+	<section className="h-screen bg-red-500 grid grid-rows-2 grid ">
+		<SandpackProvider
+			template="react"
+			theme={amethyst}
+			options={{ resizablePanels: true }}>
+			<SandpackLayout>
+				<SandpackCodeEditor />
 
-			<SandpackPreview showOpenInCodeSandbox={false} contentEditable />
-			{/* This will render the pre on the right side of your sandpack component */}
+				<SandpackPreview showOpenInCodeSandbox={false} />
+				{/* This will render the pre on the right side of your sandpack component */}
 
-			<SandpackConsole />
-		</SandpackLayout>
-	</SandpackProvider>
+				<SandpackConsole />
+			</SandpackLayout>
+		</SandpackProvider>
+	</section>
 );
 }
 

@@ -8,7 +8,7 @@ import {
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
-import { filter, filter_Answer } from "./Exercise_1_Data";
+import { filter, filter_Answer, nevim } from "./Exercise_1_Data";
 import { preview_Css } from "./preview_Css";
 
 type Props = {
@@ -27,7 +27,7 @@ interface Options {
 }
 
 interface Files {
-	[key: string]: SandpackFileExplorerProp;
+	[key: string]: SandpackFile;
 	/*"/App.js": SandpackFile;
 	"/filter.js": string;
 	"/style.css": string;*/
@@ -65,20 +65,20 @@ function Exercise_1({ app, props }: Props) {
 		files: {
 			"/App.js": {
 				code: app,
-				readOnly: true,
-				hidden: true,
+				//readOnly: true,
+				//hidden: true,
 			},
 			"/filter.js": {
 				code: showAnswer ? filter_Answer : filter,
 				active: true,
-				hidden: true,
+
 			},
 			"/style.css": {
 				code: preview_Css,
-				active: true,
-				visible: true,
+				//active: true,
 				hidden: true,
 			},
+
 		},
 		template: "react",
 		theme: amethyst,

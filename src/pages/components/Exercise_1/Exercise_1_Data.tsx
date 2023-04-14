@@ -1,3 +1,4 @@
+
 export const Exercise_1_App: string = `import React from 'react';
 import './style.css';
 import filter from './filter';
@@ -39,6 +40,9 @@ export const filter: string = `export default () => {
 
 	};
 `;
+
+
+
 
 export const filter_Answer: string = `export default () => {
 	/*
