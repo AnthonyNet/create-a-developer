@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import {
 	Sandpack,
 	SandpackCodeOptions,
@@ -10,23 +11,29 @@ import {
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
+import { Exercise_1_App, filter, filter_Answer } from "./Exercise_1_Data";
+import { preview_Css } from "./preview_Css";
+
 type Props = {
 	app: string;
-	exercise: string;
-	styles: string;
 };
 
 interface Options {
 	editorHeight: string;
 	showConsole: boolean;
-	visibleFiles: string[];
-	activeFile: string;
+	showConsoleButton: boolean;
+	closableTabs: boolean;
+	showLineNumbers: boolean;
+	showInlineErrors: boolean;
+	externalResources?: string[];
+
 }
 
 interface Files {
-	"/App.js": SandpackFile;
+	[key]: Sandpackfile;
+	/*"/App.js": SandpackFile;
 	"/filter.js": string;
-	"/style.css": string;
+	"/style.css": string;*/
 }
 
 interface Setup_Props {
@@ -37,27 +44,55 @@ interface Setup_Props {
 	theme: string | any;
 }
 
-function Exercise_1({ app, exercise, styles }: Props) {
+function Exercise_1({ app }: Props) {
+	const [showAnswer, setShowAnswer] = useState<boolean>(false);
+
+	const handleClick = () => {
+		setShowAnswer((showAnswer) => !showAnswer);
+	};
+
 	const Setup_Props: Setup_Props = {
 		options: {
 			editorHeight: "96vh",
 			showConsole: true,
-			visibleFiles: ["/filter.js"],
-			activeFile: "/filter.js",
+			/*visibleFiles: ["/filter.js", "/style.css"],
+			activeFile: "/filter.js",*/
+			showConsoleButton: true,
+			closableTabs: false,
+			showLineNumbers: true,
+
+			showInlineErrors: true, // What is this doing?
+			//externalResources: ["https://cdn.tailwindcss.com"] eRRoRs
 		},
 		files: {
 			"/App.js": {
 				code: app,
 				readOnly: true,
+				hidden: true,
 			},
-			"/filter.js": exercise,
-			"/style.css": styles,
+			"/filter.js": {
+				code: showAnswer ? filter_Answer : filter,
+				active: true,
+				hidden: true,
+			},
+			"/style.css": {
+				code: preview_Css,
+				active: true,
+				visible: true,
+				hidden: true,
+			},
 		},
 		template: "react",
 		theme: amethyst,
 	};
 
-	return <Sandpack {...Setup_Props} />;
+	return (
+		<>
+			<Sandpack {...Setup_Props} />
+			<button onClick={handleClick}>Ukaž odpověď</button>
+			<button onClick={() => setShowAnswer(false)}>Restart</button>
+		</>
+	);
 }
 
 export default Exercise_1;
