@@ -55,15 +55,12 @@ function Exercise_1({ app }: Props) {
 		options: {
 			editorHeight: "96vh",
 			showConsole: true,
-			/*visibleFiles: ["/filter.js", "/style.css"],
-			activeFile: "/filter.js",*/
 			showConsoleButton: true,
 			closableTabs: false,
 			showLineNumbers: true,
 
 			showInlineErrors: true, // What is this doing?
 			//externalResources: ["https://cdn.tailwindcss.com"] eRRoRs
-
 		},
 		files: {
 			"/App.js": {
