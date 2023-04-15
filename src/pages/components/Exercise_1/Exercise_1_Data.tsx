@@ -42,8 +42,6 @@ export const filter: string = `export default () => {
 `;
 
 
-
-
 export const filter_Answer: string = `export default () => {
 	/*
 	ZADÁNÍ
