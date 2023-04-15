@@ -8,7 +8,7 @@ import {
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
-import { filter, filter_Answer, nevim } from "./Exercise_1_Data";
+import { filter, filter_Answer} from "./Exercise_1_Data";
 import { preview_Css } from "./preview_Css";
 
 type Props = {
@@ -51,7 +51,7 @@ function Exercise_1({ app, props }: Props) {
 
 	const Setup_Props: Setup_Props = {
 		options: {
-			editorHeight: "96vh",
+			editorHeight: "100dvh",
 			showConsole: true,
 			/*visibleFiles: ["/filter.js", "/style.css"],
 			activeFile: "/filter.js",*/
@@ -85,11 +85,13 @@ function Exercise_1({ app, props }: Props) {
 	};
 
 	return (
-		<>
+		<section className="relative">
+			<div className="sandP_Btn h-[40px]  absolute z-10 right-0 md:left-0 md:bottom-0 my-1">
+				<button onClick={handleClick}>Ukaž odpověď</button>
+				<button onClick={() => setShowAnswer(false)}>Restart</button>
+			</div>
 			<Sandpack {...Setup_Props} {...props} />
-			<button onClick={handleClick}>Ukaž odpověď</button>
-			<button onClick={() => setShowAnswer(false)}>Restart</button>
-		</>
+		</section>
 	);
 }
 
