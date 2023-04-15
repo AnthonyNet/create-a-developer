@@ -10,7 +10,7 @@ section {
 }
 ul{
 	border: 7px double #5093ff;
-	width: 40%;
+	width: 60%;
 	height: 70dvh;
 	display: flex;
 	flex-direction: column;
