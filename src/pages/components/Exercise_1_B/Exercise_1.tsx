@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import React from "react";
 import {
 	Sandpack,
@@ -83,7 +83,7 @@ return (
 				<SandpackCodeEditor />
 
 				<SandpackPreview showOpenInCodeSandbox={false} />
-				{/* This will render the pre on the right side of your sandpack component */}
+
 
 				<SandpackConsole />
 			</SandpackLayout>
@@ -93,3 +93,4 @@ return (
 }
 
 export default Exercise_1;
+*/
