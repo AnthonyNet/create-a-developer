@@ -85,7 +85,7 @@ function Exercise_1({ app, props }: Props) {
 	};
 
 	return (
-		<section className="relative h-[500px] ">
+		<section className="relative">
 			<div className="sandP_Btn w-[240px] h-[40px]  absolute z-10 right-0 md:left-0 md:bottom-0 my-1   flex items-start">
 				<button onClick={handleClick}>Ukaž odpověď</button>
 				<button onClick={() => setShowAnswer(false)}>Restart</button>
