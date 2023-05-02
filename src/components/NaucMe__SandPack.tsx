@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Sandpack from './SandPack__Original';
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { preview_Css } from "../exercises/preview_Css";
-import { SandpackFile } from '@codesandbox/sandpack-react/types'
+
 import {Setup_Props} from './interface/NaucMe_SandPack'
 
 interface Props {
