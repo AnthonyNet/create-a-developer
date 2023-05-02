@@ -1,7 +1,7 @@
 
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import Playground from '../components/playground'
+import Playground from '../components/NaucMe__SandPack'
 import { Exercise_1_App, filter, filter_Answer} from '@/exercises/Exercise_1_Data';
 
 const inter = Inter({ subsets: ['latin'] })
