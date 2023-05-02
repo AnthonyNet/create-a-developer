@@ -3,7 +3,6 @@ import React from 'react';
 import { useState } from 'react';
 import Sandpack from './SandPack__Original';
 import { amethyst } from "@codesandbox/sandpack-themes";
-import { filter, filter_Answer } from "../exercises/Exercise_1_Data";
 import { preview_Css } from "../exercises/preview_Css";
 import { SandpackFile } from '@codesandbox/sandpack-react/types'
 
