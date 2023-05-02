@@ -83,8 +83,8 @@ const Setup_Props: Setup_Props = {
 };
 
   return (
-		<section className="border-2 border-red-500 w-screen h-screen">
-			<div className="sandP_Btn w-[240px] h-[40px]  absolute z-10 right-0 md:left-0 md:bottom-0 my-1   flex items-start">
+		<section className="w-screen h-screen">
+			<div className="sandP_Btn w-[240px] h-[40px]  absolute z-10 right-0 md:left-0 md:bottom-0 my-1  flex items-start">
 				<button onClick={handleClick}>Ukaž odpověď</button>
 				<button onClick={() => setShowAnswer(false)}>Restart</button>
 			</div>
