@@ -35,8 +35,8 @@ const Playground = ({app, filter, filter_Answer}:Props) => {
 	interface Files {
 		[key: string]: SandpackFile;
 		/*"/App.js": SandpackFile;
-	"/filter.js": string;
-	"/style.css": string;*/
+		"/filter.js": string;
+		"/style.css": string;*/
 	}
 interface Setup_Props {
 
