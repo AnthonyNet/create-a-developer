@@ -5,6 +5,7 @@ import Sandpack from './SandPack__Original';
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { preview_Css } from "../exercises/preview_Css";
 import { SandpackFile } from '@codesandbox/sandpack-react/types'
+import {Setup_Props} from './interface/NaucMe_SandPack'
 
 interface Props {
 	app: string;
@@ -18,38 +19,11 @@ const Playground = ({app, filter, filter_Answer}:Props) => {
 	const handleClick = () => {
 		setShowAnswer((showAnswer) => !showAnswer);
 	};
-	interface Options {
-		resizablePanels: boolean;
-		editorHeight: string;
-		showConsole: boolean;
-		showConsoleButton: boolean;
-		closableTabs: boolean;
-		showLineNumbers: boolean;
-		editorWidthPercentage: number;
-		showTabs: boolean;
-		showInlineErrors: boolean;
-		externalResources?: string[];
 
-	}
-
-	interface Files {
-		[key: string]: SandpackFile;
-		/*"/App.js": SandpackFile;
-		"/filter.js": string;
-		"/style.css": string;*/
-	}
-interface Setup_Props {
-
-	options: Options;
-	files: Files;
-	template: string | any;
-	// template can´t be string ???
-	theme: string | any;
-}
 const Setup_Props: Setup_Props = {
 	options: {
 		resizablePanels: true,
-		editorHeight: "100dvh",
+		editorHeight: "99.8dvh",
 		showConsole: true,
 		showConsoleButton: true,
 		showLineNumbers: true,
@@ -66,7 +40,7 @@ const Setup_Props: Setup_Props = {
 		"/App.js": {
 			code: app,
 			//readOnly: true,
-			//hidden: true,
+			hidden: true,
 		},
 		"/filter.js": {
 			code: showAnswer ? filter_Answer : filter,
