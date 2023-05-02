@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@codesandbox/sandpack-react": "^2.4.5",
+    "@codesandbox/sandpack-react": "^2.6.0",
     "@codesandbox/sandpack-themes": "^2.0.21",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",

@@ -8,13 +8,14 @@ import {
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
-import { filter, filter_Answer} from "../../../exercises/Exercise_1_Data";
-import { preview_Css } from "../../../exercises/preview_Css";
+import { filter, filter_Answer} from "../../exercises/Exercise_1_Data";
+import { preview_Css } from "../../exercises/preview_Css";
 
 type Props = {
 	app: string;
 	props: {};
 };
+
 
 interface Options {
 	editorHeight: string;
