@@ -43,11 +43,7 @@ import { css, THEME_PREFIX } from "../styles";
 	options.editorWidthPercentage ??= 50;
 	options.showConsole ??= false; */
 
-	/*
-	options.resizablePanels = true;
-	options.editorWidthPercentage = 50;
-	options.showConsole = true;
-*/
+
 	const rtlLayout = options?.rtl ?? false;
 	const codeEditorOptions: CodeEditorProps = {
 		showTabs: options.showTabs,
