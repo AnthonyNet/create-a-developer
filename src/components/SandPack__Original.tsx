@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import {useState, useEffect, useRef, Fragment} from "react";
+import { useState, useEffect, useRef, Fragment } from "react";
 import {
 	SandpackCodeEditor,
 	SandpackConsole,
@@ -12,8 +12,6 @@ import {
 	SandpackProvider,
 	useClassNames,
 	SANDBOX_TEMPLATES,
-
-
 } from "@codesandbox/sandpack-react";
 
 import type {
@@ -27,8 +25,7 @@ import type {
 
 import { css, THEME_PREFIX } from "../styles";
 
-
- const Sandpack: SandpackInternal = ({
+const Sandpack: SandpackInternal = ({
 	options,
 	template,
 	customSetup,
@@ -39,11 +36,16 @@ import { css, THEME_PREFIX } from "../styles";
 	options ??= {};
 
 	/* DEFAULT
+
 	options.resizablePanels??= true;
 	options.editorWidthPercentage ??= 50;
 	options.showConsole ??= false; */
 
-
+	/*
+	options.resizablePanels = true;
+	options.editorWidthPercentage = 50;
+	options.showConsole = true;
+*/
 	const rtlLayout = options?.rtl ?? false;
 	const codeEditorOptions: CodeEditorProps = {
 		showTabs: options.showTabs,
