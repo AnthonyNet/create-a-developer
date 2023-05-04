@@ -1,4 +1,7 @@
-import type { SandpackTheme, SandpackPredefinedTheme } from "../types";
+import type {
+	SandpackTheme,
+	SandpackPredefinedTheme,
+} from "@codesandbox/sandpack-react";
 
 /**
  * @category Theme

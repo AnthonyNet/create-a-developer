@@ -1,4 +1,4 @@
-import { SandpackTheme } from "./types";
+import { SandpackTheme } from "@codesandbox/sandpack-react";
 export const amethyst: SandpackTheme = {
 	colors: {
 		surface1: "#000000",
