@@ -1,3 +1,5 @@
+// This is CSS for playground preview
+
 export const preview_Css = `
 section {
 	height: 97dvh;
