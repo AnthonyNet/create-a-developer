@@ -41,6 +41,7 @@ const Sandpack: SandpackInternal = ({
 	options.editorWidthPercentage ??= 50;
 	options.showConsole ??= false; */
 
+// This option here is mandatory, otherwise TS gets mad
 
 	options.resizablePanels = true;
 	options.editorWidthPercentage = 50;
