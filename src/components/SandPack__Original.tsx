@@ -259,6 +259,7 @@ const Sandpack: SandpackInternal = ({
 							showNavigator={options.showNavigator}
 							showRefreshButton={options.showRefreshButton}
 							style={topRowStyle}
+							showOpenInCodeSandbox={false}
 						/>
 					)}
 
