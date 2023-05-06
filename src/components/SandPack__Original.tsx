@@ -87,7 +87,7 @@ const Sandpack: SandpackInternal = ({
 	};
 
 	/**
-	 * Console
+	 * Console visibility SETUP
 	 */
 	const [consoleVisibility, setConsoleVisibility] = useState(
 		options.showConsole
