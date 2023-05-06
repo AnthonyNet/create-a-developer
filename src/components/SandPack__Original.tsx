@@ -35,7 +35,7 @@ const Sandpack: SandpackInternal = ({
 }) => {
 	options ??= {};
 
-	/* DEFAULT
+	/* This was DEFAULT SETUP HERE
 
 	options.resizablePanels??= true;
 	options.editorWidthPercentage ??= 50;
