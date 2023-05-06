@@ -106,6 +106,7 @@ const Sandpack: SandpackInternal = ({
 			: "preview"
 	) as typeof options.layout;
 
+	//Console HIDE/SHOW Switch SETUP
 	const actionsChildren = options.showConsoleButton ? (
 		<ConsoleCounterButton
 			counter={counter}
@@ -114,7 +115,7 @@ const Sandpack: SandpackInternal = ({
 	) : undefined;
 
 	/**
-	 * Resizable
+	 * Resizable SETUP
 	 */
 	/* eslint-disable @typescript-eslint/no-explicit-any */
 	const dragEventTargetRef = useRef<any>(null);
