@@ -95,6 +95,7 @@ const Sandpack: SandpackInternal = ({
 	const [counter, setCounter] = useState(0);
 	const hasRightColumn = options.showConsole || options.showConsoleButton;
 
+	//Template SETUP
 	/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
 	const templateFiles = SANDBOX_TEMPLATES[template!] ?? {};
 	const mode = (
