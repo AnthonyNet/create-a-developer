@@ -34,6 +34,7 @@ const Setup_Props: Setup_Props = {
 
 		showInlineErrors: true, // What is this doing?
 		//externalResources: ["https://cdn.tailwindcss.com"] eRRoRs
+
 	},
 	files: {
 		"/App.js": {

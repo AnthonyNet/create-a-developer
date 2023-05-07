@@ -11,6 +11,7 @@ interface Options {
 	showTabs: boolean;
 	showInlineErrors: boolean;
 	externalResources?: string[];
+	showOpenInCodeSandbox: boolean;
 }
 
 interface Files {

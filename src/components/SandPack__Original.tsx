@@ -41,11 +41,13 @@ const Sandpack: SandpackInternal = ({
 	options.editorWidthPercentage ??= 50;
 	options.showConsole ??= false; */
 
-// This option here is mandatory, otherwise TS gets mad
+	// This option here is mandatory, otherwise TS gets mad
 
-	options.resizablePanels = true;
+	(options.resizablePanels = true);
 	options.editorWidthPercentage = 50;
 	options.showConsole = true;
+
+
 
 	const rtlLayout = options?.rtl ?? false;
 	const codeEditorOptions: CodeEditorProps = {
@@ -259,7 +261,7 @@ const Sandpack: SandpackInternal = ({
 							showNavigator={options.showNavigator}
 							showRefreshButton={options.showRefreshButton}
 							style={topRowStyle}
-							showOpenInCodeSandbox={false}
+							showOpenInCodeSandbox= {options.showOpenInCodeSandbox}
 						/>
 					)}
 
