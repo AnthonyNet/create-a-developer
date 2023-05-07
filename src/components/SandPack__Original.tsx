@@ -261,6 +261,8 @@ const Sandpack: SandpackInternal = ({
 							showNavigator={options.showNavigator}
 							showRefreshButton={options.showRefreshButton}
 							style={topRowStyle}
+							//added externally for NaucMeIT
+							//Hide the Open in Original CodeSandbox button
 							showOpenInCodeSandbox= {options.showOpenInCodeSandbox}
 						/>
 					)}
