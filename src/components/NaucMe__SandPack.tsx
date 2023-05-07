@@ -20,6 +20,7 @@ const Playground = ({app, filter, filter_Answer}:Props) => {
 	};
 
 const Setup_Props: Setup_Props = {
+
 	options: {
 		resizablePanels: true,
 		editorHeight: "99.8dvh",
@@ -34,6 +35,7 @@ const Setup_Props: Setup_Props = {
 		showOpenInCodeSandbox: false,
 		showInlineErrors: true, // What is this doing?
 		//externalResources: ["https://cdn.tailwindcss.com"] eRRoRs
+
 	},
 	files: {
 		"/App.js": {

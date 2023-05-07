@@ -26,6 +26,7 @@ import type {
 import { css, THEME_PREFIX } from "../styles";
 
 const Sandpack: SandpackInternal = ({
+
 	options,
 	template,
 	customSetup,
@@ -47,8 +48,6 @@ const Sandpack: SandpackInternal = ({
 	options.editorWidthPercentage = 50;
 	options.showConsole = true;
 
-
-
 	const rtlLayout = options?.rtl ?? false;
 	const codeEditorOptions: CodeEditorProps = {
 		showTabs: options.showTabs,
@@ -62,6 +61,7 @@ const Sandpack: SandpackInternal = ({
 		readOnly: options.readOnly,
 		showReadOnly: options.showReadOnly,
 		additionalLanguages: options.codeEditor?.additionalLanguages,
+
 	};
 
 	const providerOptions: SandpackInternalOptions<
@@ -263,7 +263,7 @@ const Sandpack: SandpackInternal = ({
 							style={topRowStyle}
 							//added externally for NaucMeIT
 							//Hide the Open in Original CodeSandbox button
-							showOpenInCodeSandbox= {options.showOpenInCodeSandbox}
+							showOpenInCodeSandbox= {false}
 						/>
 					)}
 
