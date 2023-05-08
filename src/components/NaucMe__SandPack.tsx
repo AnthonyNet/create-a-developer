@@ -32,7 +32,6 @@ const Setup_Props: Setup_Props = {
 		showTabs: true,
 		/*visibleFiles: ["/filter.js", "/style.css"],
 			activeFile: "/filter.js",*/
-		showOpenInCodeSandbox: false,
 		showInlineErrors: true, // What is this doing?
 		//externalResources: ["https://cdn.tailwindcss.com"] eRRoRs
 
