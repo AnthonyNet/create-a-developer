@@ -132,7 +132,7 @@ const Sandpack: SandpackInternal = ({
 		flexGrow: 100 - horizontalSize,
 		flexShrink: 100 - horizontalSize,
 		flexBasis: 0,
-		width: 100 - horizontalSize + "%",
+		width: 10 - horizontalSize + "%",
 		gap: consoleVisibility ? 1 : 0,
 		height: options.editorHeight, // use the original editor height
 	};

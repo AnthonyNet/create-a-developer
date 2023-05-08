@@ -23,7 +23,7 @@ const Setup_Props: Setup_Props = {
 
 	options: {
 		resizablePanels: true,
-		editorHeight: "99.8dvh",
+		editorHeight: "99.75vh",
 		showConsole: true,
 		showConsoleButton: true,
 		showLineNumbers: true,
