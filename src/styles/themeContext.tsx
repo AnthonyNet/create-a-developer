@@ -47,32 +47,32 @@ const SandpackThemeContext = React.createContext<{
  * @category Theme
  */
 const SandpackThemeProvider: React.FC<
-  React.HTMLAttributes<HTMLDivElement> & {
-    theme?: SandpackThemeProp;
-    children?: React.ReactNode;
-  }
+	React.HTMLAttributes<HTMLDivElement> & {
+		theme?: SandpackTheme;
+		//theme?: SandpackThemeProp;
+		children?: React.ReactNode;
+	}
 > = ({ theme: themeFromProps, children, className, ...props }) => {
-  const { theme, id, mode } = standardizeTheme(themeFromProps);
-  const classNames = useClassNames();
+	const { theme, id, mode } = standardizeTheme(themeFromProps);
+	const classNames = useClassNames();
 
-  const themeClassName = React.useMemo(() => {
-    return createTheme(id, standardizeStitchesTheme(theme));
-  }, [theme, id]);
+	const themeClassName = React.useMemo(() => {
+		return createTheme(id, standardizeStitchesTheme(theme));
+	}, [theme, id]);
 
-  return (
-    <SandpackThemeContext.Provider value={{ theme, id, mode }}>
-      <div
-        className={classNames("wrapper", [
-          themeClassName,
-          wrapperClassName({ variant: mode }),
-          className,
-        ])}
-        {...props}
-      >
-        {children}
-      </div>
-    </SandpackThemeContext.Provider>
-  );
+	return (
+		<SandpackThemeContext.Provider value={{ theme, id, mode }}>
+			<div
+				className={classNames("wrapper", [
+					themeClassName,
+					wrapperClassName({ variant: mode }),
+					className,
+				])}
+				{...props}>
+				{children}
+			</div>
+		</SandpackThemeContext.Provider>
+	);
 };
 
 const SandpackThemeConsumer = SandpackThemeContext.Consumer;
