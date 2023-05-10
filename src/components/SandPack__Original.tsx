@@ -24,9 +24,9 @@ import type {
 } from "@codesandbox/sandpack-react";
 
 import { css, THEME_PREFIX } from "../styles";
-
-const Sandpack: SandpackInternal = ({
-
+type Props = SandpackInternal & { customProps: { showOpenInCodeSandbox:boolean} };
+const Sandpack: Props = ({
+	customProps,
 	options,
 	template,
 	customSetup,
