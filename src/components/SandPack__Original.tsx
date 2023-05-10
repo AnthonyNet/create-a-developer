@@ -16,7 +16,6 @@ import {
 
 import type {
   CodeEditorProps,
-  SandpackInternal,
   SandpackInternalOptions,
   TemplateFiles,
   SandpackFiles,
@@ -26,7 +25,7 @@ import type {
 
 import { css, THEME_PREFIX } from "../styles";
 
-type Props = SandpackProps & {
+export type CustomProps = SandpackProps & {
   customProps: { showOpenInCodeSandbox: boolean };
 };
 
@@ -38,7 +37,7 @@ const Sandpack = ({
   files,
   theme,
   ...props
-}: Props) => {
+}: CustomProps) => {
   options ??= {};
 
   /* This was DEFAULT SETUP HERE
