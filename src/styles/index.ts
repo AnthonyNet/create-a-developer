@@ -1,10 +1,11 @@
 import { createStitches } from "@stitches/core";
 
 import { defaultLight, defaultDark, SANDPACK_THEMES } from "../themes";
-import type { SandpackTheme, SandpackThemeProp } from "../types";
+import type { SandpackTheme } from "../types";
 import { isDarkColor } from "../utils/stringUtils";
 
 import { createStitchesMock } from "./stitches-mock";
+import { SandpackThemeProp } from "@codesandbox/sandpack-react/types";
 
 /**
  * @category Theme
