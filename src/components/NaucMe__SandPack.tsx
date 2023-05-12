@@ -4,6 +4,7 @@ import { useState } from "react";
 import Sandpack, { CustomProps } from "./SandPack__Original";
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { preview_Css } from "../exercises/preview_Css";
+//not needed ?
 import { Setup_Props } from "./interface/NaucMe_SandPack";
 
 interface Props {
