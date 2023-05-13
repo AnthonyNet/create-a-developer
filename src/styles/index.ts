@@ -23,122 +23,122 @@ export const { createTheme, css, getCssText, keyframes } = process.env.SANDPACK_
     });
 
 const defaultVariables = {
-  space: new Array(11).fill(" ").reduce((acc, _, index) => {
-    return { ...acc, [index + 1]: `${(index + 1) * 4}px` };
-  }, {}),
-  border: { radius: "4px" },
-  layout: { height: "300px", headerHeight: "40px" },
-  transitions: { default: "150ms ease" },
-  zIndices: {
-    base: "1",
-    overlay: "2",
-    top: "3",
-  },
+	space: new Array(11).fill(" ").reduce((acc, _, index) => {
+		return { ...acc, [index + 1]: `${(index + 1) * 4}px` };
+	}, {}),
+	border: { radius: "4px" },
+	layout: { height: "300px", headerHeight: "40px" },
+	transitions: { default: "150ms ease" },
+	zIndices: {
+		base: "1",
+		overlay: "2",
+		top: "3",
+	},
 };
 
 /**
  * @category Theme
  */
 export const standardizeStitchesTheme = (
-  theme: SandpackTheme
+	theme: SandpackTheme
 ): Record<string, Record<string, string>> => {
-  // Flat values
-  const syntaxEntries = Object.entries(theme.syntax);
-  const syntax = syntaxEntries.reduce((tokenAcc, [tokenName, tokenValue]) => {
-    // Single property
-    let newValues = { [`color-${tokenName}`]: tokenValue };
+	// Flat values
+	const syntaxEntries = Object.entries(theme.syntax);
+	const syntax = syntaxEntries.reduce((tokenAcc, [tokenName, tokenValue]) => {
+		// Single property
+		let newValues = { [`color-${tokenName}`]: tokenValue };
 
-    // Multiples properties
-    if (typeof tokenValue === "object") {
-      newValues = Object.entries(tokenValue).reduce(
-        (valueAcc, [styleProp, styleValue]) => {
-          return {
-            ...valueAcc,
-            [`${styleProp}-${tokenName}`]: styleValue,
-          };
-        },
-        {}
-      );
-    }
+		// Multiples properties
+		if (typeof tokenValue === "object") {
+			newValues = Object.entries(tokenValue).reduce(
+				(valueAcc, [styleProp, styleValue]) => {
+					return {
+						...valueAcc,
+						[`${styleProp}-${tokenName}`]: styleValue,
+					};
+				},
+				{}
+			);
+		}
 
-    return { ...tokenAcc, ...newValues };
-  }, {});
+		return { ...tokenAcc, ...newValues };
+	}, {});
 
-  return {
-    ...defaultVariables,
-    colors: theme.colors,
-    font: theme.font,
-    syntax,
-  };
+	return {
+		...defaultVariables,
+		colors: theme.colors,
+		font: theme.font,
+		syntax,
+	};
 };
 
 /**
  * @category Theme
  */
 export const standardizeTheme = (
-  inputTheme: SandpackThemeProp = "light"
+	inputTheme: SandpackThemeProp = "light"
 ): { id: string; theme: SandpackTheme; mode: "dark" | "light" } => {
-  const defaultLightThemeKey = "default";
+	const defaultLightThemeKey = "default";
 
-  /**
-   * Set a local theme: dark or light
-   */
-  if (typeof inputTheme === "string") {
-    const predefinedTheme = SANDPACK_THEMES[inputTheme];
-    if (!predefinedTheme) {
-      throw new Error(
-        `[sandpack-react]: invalid theme '${inputTheme}' provided.`
-      );
-    }
+	/**
+	 * Set a local theme: dark or light
+	 */
+	if (typeof inputTheme === "string") {
+		const predefinedTheme = SANDPACK_THEMES[inputTheme];
+		if (!predefinedTheme) {
+			throw new Error(
+				`[sandpack-react]: invalid theme '${inputTheme}' provided.`
+			);
+		}
 
-    return {
-      theme: predefinedTheme,
-      id: inputTheme,
-      mode: isDarkColor(predefinedTheme.colors.surface1) ? "dark" : "light",
-    };
-  }
+		return {
+			theme: predefinedTheme,
+			id: inputTheme,
+			mode: isDarkColor(predefinedTheme.colors.surface1) ? "dark" : "light",
+		};
+	}
 
-  /**
-   * Fullfill the colors key, in case it's missing any key
-   */
-  const mode = isDarkColor(
-    inputTheme?.colors?.surface1 ?? defaultLight.colors.surface1
-  )
-    ? "dark"
-    : "light";
+	/**
+	 * Fullfill the colors key, in case it's missing any key
+	 */
+	const mode = isDarkColor(
+		inputTheme?.colors?.surface1 ?? defaultLight.colors.surface1
+	)
+		? "dark"
+		: "light";
 
-  /**
-   * Figure out what's the properly default colors it should be
-   * error, warning and success colors have different values between dark and light
-   */
-  const baseTheme = mode === "dark" ? defaultDark : defaultLight;
-  const colorsByMode = { ...baseTheme.colors, ...(inputTheme?.colors ?? {}) };
-  const syntaxByMode = { ...baseTheme.syntax, ...(inputTheme?.syntax ?? {}) };
-  const fontByMode = { ...baseTheme.font, ...(inputTheme?.font ?? {}) };
+	/**
+	 * Figure out what's the properly default colors it should be
+	 * error, warning and success colors have different values between dark and light
+	 */
+	const baseTheme = mode === "dark" ? defaultDark : defaultLight;
+	const colorsByMode = { ...baseTheme.colors, ...(inputTheme?.colors ?? {}) };
+	const syntaxByMode = { ...baseTheme.syntax, ...(inputTheme?.syntax ?? {}) };
+	const fontByMode = { ...baseTheme.font, ...(inputTheme?.font ?? {}) };
 
-  const theme = {
-    colors: colorsByMode,
-    syntax: syntaxByMode,
-    font: fontByMode,
-  };
+	const theme = {
+		colors: colorsByMode,
+		syntax: syntaxByMode,
+		font: fontByMode,
+	};
 
-  const id = inputTheme
-    ? simpleHashFunction(JSON.stringify(theme))
-    : defaultLightThemeKey;
+	const id = inputTheme
+		? simpleHashFunction(JSON.stringify(theme))
+		: defaultLightThemeKey;
 
-  return {
-    theme,
-    id: `sp-${id}`,
-    mode,
-  };
+	return {
+		theme,
+		id: `sp-${id}`,
+		mode,
+	};
 };
 
 const simpleHashFunction = (str: string): number => {
-  let hash = 0;
-  for (let i = 0; i < str.length; hash &= hash) {
-    hash = 31 * hash + str.charCodeAt(i++);
-  }
-  return Math.abs(hash);
+	let hash = 0;
+	for (let i = 0; i < str.length; hash &= hash) {
+		hash = 31 * hash + str.charCodeAt(i++);
+	}
+	return Math.abs(hash);
 };
 
 /**
