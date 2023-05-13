@@ -1,6 +1,5 @@
 import { SandpackFile } from "@codesandbox/sandpack-react/types";
 
-
 interface Options {
 	resizablePanels: boolean;
 	editorHeight: string;
@@ -21,7 +20,6 @@ interface Files {
 		"/style.css": string;*/
 }
 export interface Setup_Props {
-
 	options: Options;
 	files: Files;
 	template: string | any;
