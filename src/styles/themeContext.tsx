@@ -9,38 +9,38 @@ import { standardizeTheme } from ".";
 import { createTheme, css, standardizeStitchesTheme } from ".";
 
 const wrapperClassName = css({
-  all: "initial",
-  fontSize: "$font$size",
-  fontFamily: "$font$body",
-  display: "block",
-  boxSizing: "border-box",
-  textRendering: "optimizeLegibility",
-  WebkitTapHighlightColor: "transparent",
-  WebkitFontSmoothing: "subpixel-antialiased",
+	all: "initial",
+	fontSize: "$font$size",
+	fontFamily: "$font$body",
+	display: "block",
+	boxSizing: "border-box",
+	textRendering: "optimizeLegibility",
+	WebkitTapHighlightColor: "transparent",
+	WebkitFontSmoothing: "subpixel-antialiased",
 
-  variants: {
-    variant: {
-      dark: { colorScheme: "dark" },
-      light: { colorScheme: "light" },
-    },
-  },
+	variants: {
+		variant: {
+			dark: { colorScheme: "dark" },
+			light: { colorScheme: "light" },
+		},
+	},
 
-  "@media screen and (min-resolution: 2dppx)": {
-    WebkitFontSmoothing: "antialiased",
-    MozOsxFontSmoothing: "grayscale",
-  },
-  "*": { boxSizing: "border-box" },
-  ".sp-wrapper:focus": { outline: "0" },
+	"@media screen and (min-resolution: 2dppx)": {
+		WebkitFontSmoothing: "antialiased",
+		MozOsxFontSmoothing: "grayscale",
+	},
+	"*": { boxSizing: "border-box" },
+	".sp-wrapper:focus": { outline: "0" },
 });
 
 const SandpackThemeContext = React.createContext<{
-  theme: SandpackTheme;
-  id: string;
-  mode: "dark" | "light";
+	theme: SandpackTheme;
+	id: string;
+	mode: "dark" | "light";
 }>({
-  theme: defaultLight,
-  id: "light",
-  mode: "light",
+	theme: defaultLight,
+	id: "light",
+	mode: "light",
 });
 
 /**
