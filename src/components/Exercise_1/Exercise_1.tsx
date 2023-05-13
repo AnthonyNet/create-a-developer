@@ -8,14 +8,13 @@ import {
 } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 
-import { filter, filter_Answer} from "../../exercises/Exercise_1_Data";
+import { filter, filter_Answer } from "../../exercises/Exercise_1_Data";
 import { preview_Css } from "../../exercises/preview_Css";
 
 type Props = {
 	app: string;
 	props: {};
 };
-
 
 interface Options {
 	editorHeight: string;
@@ -33,7 +32,6 @@ interface Files {
 	"/filter.js": string;
 	"/style.css": string;*/
 }
-
 
 interface Setup_Props {
 	options: Options;
@@ -72,14 +70,12 @@ function Exercise_1({ app, props }: Props) {
 			"/filter.js": {
 				code: showAnswer ? filter_Answer : filter,
 				active: true,
-
 			},
 			"/style.css": {
 				code: preview_Css,
 				//active: true,
 				hidden: true,
 			},
-
 		},
 		template: "react",
 		theme: amethyst,
