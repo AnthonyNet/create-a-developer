@@ -12,7 +12,6 @@ import {
 	SandpackProvider,
 	useClassNames,
 	SANDBOX_TEMPLATES,
-	useSandpack
 } from "@codesandbox/sandpack-react";
 
 import type {
