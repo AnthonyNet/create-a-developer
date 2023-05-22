@@ -12,6 +12,7 @@ import {
 	SandpackProvider,
 	useClassNames,
 	SANDBOX_TEMPLATES,
+	useSandpack
 } from "@codesandbox/sandpack-react";
 
 import type {
@@ -51,6 +52,8 @@ const Sandpack = ({
 	options.resizablePanels = true;
 	options.editorWidthPercentage = 50;
 	options.showConsole = true;
+
+
 
 	const rtlLayout = options?.rtl ?? false;
 	const codeEditorOptions: CodeEditorProps = {
@@ -228,6 +231,7 @@ const Sandpack = ({
 				className={
 					rtlLayout ? classNames("rtl-layout", [rtlLayoutClassName]) : ""
 				}>
+
 				<SandpackCodeEditor
 					{...codeEditorOptions}
 					style={{
