@@ -47,14 +47,10 @@ const Playground = ({ app, exercise, answer }: Props) => {
 			},
 
 			"/filter.js": {
-				code: exerciseSave,
+				code: showAnswer ? answer : exerciseSave,
 				active: true,
 			},
 
-			"/answer.js": {
-				code: answer,
-				hidden: showAnswer,
-			},
 
 			"/style.css": {
 				code: preview_Css,
