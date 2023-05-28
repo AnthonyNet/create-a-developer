@@ -4,16 +4,18 @@ import { useState } from "react";
 import Sandpack, { CustomProps } from "./SandPack__Original";
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { preview_Css } from "../exercises/preview_Css";
+import { useSandpack } from "@codesandbox/sandpack-react";
 
 
 interface Props {
 	app: string;
-	filter: string|any;
-	filter_Answer: string;
+	exercise: string
+	answer: string;
 }
 
-const Playground = ({ app, filter, filter_Answer }: Props) => {
+const Playground = ({ app, exercise, answer }: Props) => {
 	const [showAnswer, setShowAnswer] = useState<boolean>(false);
+	const [exerciseSave, setExerciseSave] = useState<string>(exercise);
 
 	const handleClick = () => {
 		setShowAnswer((showAnswer) => !showAnswer);
@@ -43,10 +45,17 @@ const Playground = ({ app, filter, filter_Answer }: Props) => {
 				//readOnly: true,
 				hidden: true,
 			},
+
 			"/filter.js": {
-				code: showAnswer ? filter_Answer : filter,
+				code: exerciseSave,
 				active: true,
 			},
+
+			"/answer.js": {
+				code: answer,
+				hidden: showAnswer,
+			},
+
 			"/style.css": {
 				code: preview_Css,
 				//active: true,
