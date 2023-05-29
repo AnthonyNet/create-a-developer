@@ -36,17 +36,13 @@ type SandpackCustomProps = SandpackProps & {
 
 const Sandpack = ({ customProps, options, mode }: SandpackCustomProps) => {
   const { sandpack } = useSandpack();
-  const { setActiveFile, resetAllFiles, updateFile } = sandpack;
-
-  const [showAnswer, setShowAnswer] = useState<boolean>(false);
+  const { activeFile, setActiveFile, resetAllFiles, updateFile } = sandpack;
+  const isAnswerShown = activeFile === "/filterAnswer.js";
 
   const toggleAnswer = () => {
-    console.log("Toggle start");
-    const fileName = showAnswer ? "filterAnswer" : "filter";
+    const fileName = !isAnswerShown ? "filterAnswer" : "filter";
     updateFile("/App.js", Exercise_1_App(fileName));
     setActiveFile(`/${fileName}.js`);
-    setShowAnswer(!showAnswer);
-    console.log("Toggle end");
   };
 
   const rtlLayout = options?.rtl ?? false;
@@ -184,7 +180,7 @@ const Sandpack = ({ customProps, options, mode }: SandpackCustomProps) => {
     <section className="w-screen h-screen">
       <div className="sandP_Btn w-[240px] h-[40px]  absolute z-10 right-0 md:left-0 md:bottom-0 my-1  flex items-start">
         <button onClick={toggleAnswer}>
-          {showAnswer ? "Skrýt odpověď" : "Ukaž odpověď"}
+          {isAnswerShown ? "Skrýt odpověď" : "Ukaž odpověď"}
         </button>
         <button onClick={resetAllFiles}>Restart</button>
       </div>
