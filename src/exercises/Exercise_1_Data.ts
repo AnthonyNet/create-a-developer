@@ -18,7 +18,7 @@ function App() {
 export default App;
 `;
 
-export const filter: string = `export default () => {
+export const exercise: string = `export default () => {
 	/*
 	ZADÁNÍ
 	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
@@ -41,7 +41,7 @@ export const filter: string = `export default () => {
 `;
 
 
-export const filter_Answer: string = `export default () => {
+export const exercise_Answer: string = `export default () => {
 	/*
 	ZADÁNÍ
 	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
