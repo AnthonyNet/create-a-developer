@@ -1,30 +1,30 @@
-export const Exercise_1_App: string = `import React from 'react';
+export const Exercise_1_App = (
+  activeFile: string
+) => `import React from 'react';
 import './style.css';
-import filter from './filter';
+import filter from './${activeFile}';
 function App() {
 
-	return  <section>
+	return <section>
 			<h2>Seznam filmů:</h2>
 			<ul>
 				{filter()&&filter().map((movie) => (
 					<li key={crypto.randomUUID()}>{movie.id}. {movie.title}</li>
 				))}
 			</ul>
-		</section>
-
-
+		</section>\
 }
 
 export default App;
 `;
 
-export const exercise: string = `export default () => {
+export const exercise = `export default () => {
 	/*
 	ZADÁNÍ
 	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
 	{ id: id_filmu, title: název_filmu }
 	*/
-		const movies = [
+	const movies = [
 		{ id: 1, title: "The Shawshank Redemption", year: 1994 },
 		{ id: 2, title: "The Godfather", year: 1972 },
 		{ id: 3, title: "The Godfather: Part II", year: 1974 },
@@ -40,14 +40,13 @@ export const exercise: string = `export default () => {
 	};
 `;
 
-
-export const exercise_Answer: string = `export default () => {
+export const exercise_Answer = `export default () => {
 	/*
 	ZADÁNÍ
 	Pomocí funkce map projdi pole objektů "movies" a vrať pro každý objekt:
 	{ id: id_filmu, title: název_filmu }
 	*/
-		const movies = [
+	const movies = [
 		{ id: 1, title: "The Shawshank Redemption", year: 1994 },
 		{ id: 2, title: "The Godfather", year: 1972 },
 		{ id: 3, title: "The Godfather: Part II", year: 1974 },
@@ -62,8 +61,6 @@ export const exercise_Answer: string = `export default () => {
 
 	};
 `;
-
-
 
 /*
  - :white_check_mark: Zobrazit/skrýt konzoli (možná, uvidíme, je to jen nápad)
