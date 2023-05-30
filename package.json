@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@codesandbox/sandpack-react": "^2.6.0",
+    "@codesandbox/sandpack-react": "^2.6.7",
     "@codesandbox/sandpack-themes": "^2.0.21",
     "@stitches/core": "^1.2.8",
     "@types/node": "18.15.11",
