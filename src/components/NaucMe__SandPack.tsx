@@ -69,6 +69,8 @@ const Playground = ({ app, exercise, answer }: Props) => {
 				<button onClick={() => setShowAnswer(false)}>Restart</button>
 			</div>
 			<Sandpack {...Setup_Props} theme={amethyst} />
+
+
 		</section>
 	);
 };
