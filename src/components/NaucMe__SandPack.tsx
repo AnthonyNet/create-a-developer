@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+
 import Sandpack, { CustomProps } from "./SandPack__Original";
 import { amethyst } from "@codesandbox/sandpack-themes";
 import { preview_Css } from "../exercises/preview_Css";
-import { useSandpack } from "@codesandbox/sandpack-react";
+
 
 interface Props {
   app: string;
