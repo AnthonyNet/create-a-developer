@@ -8,7 +8,7 @@ section {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid red;
+
 }
 ul{
 	border: 7px double #5093ff;
