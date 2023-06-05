@@ -45,6 +45,13 @@ const Sandpack = ({ customProps, options, mode }: SandpackCustomProps) => {
     setActiveFile(`/${fileName}.js`);
   };
 
+  //Function to reset the code
+
+  const resetIt = () => {
+	resetAllFiles();
+	setActiveFile("/filter.js");
+};
+
   const rtlLayout = options?.rtl ?? false;
   const codeEditorOptions: CodeEditorProps = {
     showTabs: options.showTabs,
@@ -182,7 +189,7 @@ const Sandpack = ({ customProps, options, mode }: SandpackCustomProps) => {
         <button onClick={toggleAnswer}>
           {isAnswerShown ? "Skrýt odpověď" : "Ukaž odpověď"}
         </button>
-        <button onClick={resetAllFiles}>Restart</button>
+        <button onClick={resetIt}>Restart</button>
       </div>
       <SandpackLayout
         className={

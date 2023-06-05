@@ -12,7 +12,7 @@ function App() {
 					<li key={crypto.randomUUID()}>{movie.id}. {movie.title}</li>
 				))}
 			</ul>
-		</section>\
+		</section>
 }
 
 export default App;
@@ -61,27 +61,3 @@ export const exercise_Answer = `export default () => {
 
 	};
 `;
-
-/*
- - :white_check_mark: Zobrazit/skrýt konzoli (možná, uvidíme, je to jen nápad)
-``` k tomu je už hotový btn ```
--  :white_check_mark: Jedna exportovaná React komponenta, která bude brát téměř stejné properties jako Sandpack komponenta
-``` to jsem snad vyřešil ```
-
-Responzivita je v mojí verzi defaultně vyřešená na jejich straně s tím, že na mobilu se okno s kódem  na cca 760px width už nadále nezmenšuje - je to dobré protože se neprzní kód, w
-
-:x:  - Vrátit všechny soubory k původnímu stavu (na obojí naštěstí existují funkce z useSandpack hooku, viz https://sandpack.codesandbox.io/docs/advanced-usage/hooks#usesandpack)
-
-```Bohužel. Pouze v advanced verzi kde se vypisují jednotlivé komponenty, jenže tam mi nefunguje drag&drop jednotlivých oken. Strávil jsem tím dva dny, jsem tragéd.
-
-<SandpackProvider template="react">
-    <SandpackLayout>
-    <SandpackCodeEditor />
-    <SandpackPreview />
-    <SandpackConsole />
-    </SandpackLayout>
-</SandpackProvider>```
-
-Other components (SandpackProvider for example) do not have this functionality and it must be implemented by the user.
-https://sandpack.codesandbox.io/docs/getting-started/layout#resizable-panels
-TO BUDE ASI TEN PROBLÉM*/
