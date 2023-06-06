@@ -1,16 +1,28 @@
-export const Exercise_1_App = (
-  activeFile: string
-) => `import React from 'react';
+export const Exercise_1_App = (activeFile: string) => `import React from 'react';
 import './style.css';
 import filter from './${activeFile}';
+import {useState, useEffect} from 'react';
+
+
+
 function App() {
+
+
+	console.log(filter());
+	const movies = filter()&&filter().map((movie) => (
+				!movie.year
+				?(<li key={movie.id}>
+						{movie.id}.{movie.title}
+					</li>)
+				: ""
+));
+
+
 
 	return <section>
 			<h2>Seznam filmů:</h2>
 			<ul>
-				{filter()&&filter().map((movie) => (
-					<li key={crypto.randomUUID()}>{movie.id}. {movie.title}</li>
-				))}
+				{movies}
 			</ul>
 		</section>
 }
