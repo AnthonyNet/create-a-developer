@@ -1,14 +1,9 @@
 export const Exercise_1_App = (activeFile: string) => `import React from 'react';
 import './style.css';
 import filter from './${activeFile}';
-import {useState, useEffect} from 'react';
-
-
 
 function App() {
 
-
-	console.log(filter());
 	const movies = filter()&&filter().map((movie) => (
 				!movie.year
 				?(<li key={movie.id}>
